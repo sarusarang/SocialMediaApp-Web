@@ -2,7 +2,7 @@ import ProfileLoader from "@/components/Loaders/Profile/ProfileLoader";
 import ProfileHeader from "@/components/Profile/ProfileHeader";
 import ProfilePosts from "@/components/Profile/ProfilePosts";
 import { useGetUserProfile } from "@/Services/profile/useProfile";
-import { useParams } from "react-router-dom";
+
 
 
 
@@ -11,7 +11,7 @@ export default function Profile() {
 
 
     // get user name of the user
-    const { username } = useParams();
+    // const { username } = useParams();
 
 
 
