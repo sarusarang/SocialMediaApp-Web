@@ -63,7 +63,7 @@ export const SuspenseLoader = ({
     };
 
     return (
-        <div
+        <section aria-label="main-loader"
             className={cn(
                 "flex flex-col items-center justify-center",
                 fullScreen && "fixed inset-0 z-50 bg-background/80 backdrop-blur-sm",
@@ -104,7 +104,7 @@ export const SuspenseLoader = ({
                     {text}
                 </motion.p>
             )}
-        </div>
+        </section>
     );
 };
 

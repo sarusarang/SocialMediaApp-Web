@@ -171,6 +171,7 @@ export default function Login({ setIsLogin }: LoginProps) {
                       {/* Floating Label */}
                       {!field.value && (
                         <label
+                          id="password-label"
                           htmlFor="password"
                           className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm transition-all duration-200 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-400"
                         >

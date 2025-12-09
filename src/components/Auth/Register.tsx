@@ -27,8 +27,8 @@ interface LoginProps {
 
 // Zod schema
 const registerSchema = z.object({
-  username: z.string().min(2, "Username is too short").max(20, "Username is too long"),
-  fullname: z.string().min(2, "Full name is too short").max(35, "Full name is too long"),
+  username: z.string().min(3, "Username is too short").max(20, "Username is too long"),
+  fullname: z.string().min(3, "Full name is too short").max(35, "Full name is too long"),
   identifier: z.string().min(5, "Enter a valid email or phone number with country code")
     .refine(
       (value) => {
@@ -328,7 +328,7 @@ export default function Register({ setIsLogin }: LoginProps) {
                     <div className="relative">
                       <Input
                         {...field}
-                        id="password"
+                        id="register-password"
                         type={showPassword ? "text" : "password"}
                         placeholder=" "
                         className="peer w-full bg-transparent border border-gray-600 text-white sm:py-7 py-6 px-3 pr-10 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
@@ -336,6 +336,7 @@ export default function Register({ setIsLogin }: LoginProps) {
 
                       {!field.value && (
                         <label
+                          id="register-password-lable"
                           htmlFor="password"
                           className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm transition-all duration-200 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-400"
                         >

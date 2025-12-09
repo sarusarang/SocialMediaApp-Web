@@ -202,7 +202,7 @@ export const Sidebar = ({ isCollapsed, setIsCollapsed }: { isCollapsed: boolean,
                     exit={{ opacity: 0, scale: 0.1 }}
                   >
 
-                    <Link to="/profile" className="p-1 rounded-full hover:bg-accent">
+                    <Link to="/profile" className="p-1 rounded-full">
 
                       <Avatar className="border-1 border-primary/20 h-10 w-10">
                         <AvatarImage src="https://github.com/shadcn.png" />

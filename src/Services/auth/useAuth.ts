@@ -1,5 +1,6 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { RegisterApi, LoginApi, VerifyRegisterOTPApi, ResendRegisterOTPApi, LogoutApi, CheckAuthStatusApi, CheckIndentifierApi, CheckUsernameApi, ForgotPasswordApi, ForgotPasswordVerifyOtpApi, ForgotPasswordChangeApi, ForgotPasswordOtpResendApi } from "./authApi";
+import type { AxiosErrorType } from "@/types/AxiosType";
 import { toast } from "sonner";
 
 
@@ -16,7 +17,7 @@ export const useRegister = () => {
 
         },
 
-        onError: (error: any) => {
+        onError: (error: AxiosErrorType) => {
 
             toast.error("Oops..!", { description: error?.message, duration: 5000 })
             console.log("Register Error", error);
@@ -41,7 +42,7 @@ export const useVerifyRegisterOTP = () => {
 
         },
 
-        onError: (error: any) => {
+        onError: (error: AxiosErrorType) => {
 
             toast.error("Oops..!", { description: error?.message, duration: 5000 });
             console.log("Verify Register OTP Error", error);
@@ -66,7 +67,7 @@ export const useVerifyRegisterOTPResend = () => {
 
         },
 
-        onError: (error: any) => {
+        onError: (error: AxiosErrorType) => {
 
             toast.error("Oops..!", { description: error?.message, duration: 5000 })
             console.log("Verify Register OTP Resend Error", error);
@@ -91,7 +92,7 @@ export const useLogin = () => {
 
         },
 
-        onError: (error: any) => {
+        onError: (error: AxiosErrorType) => {
 
             toast.error("Oops..!", { description: error?.message, duration: 5000 })
             console.log("Login Error", error);
@@ -116,7 +117,7 @@ export const useLogout = () => {
 
         },
 
-        onError: (error: any) => {
+        onError: (error: AxiosErrorType) => {
 
             toast.error("Oops..!", { description: error?.message, duration: 5000 })
             console.log("Logout Error", error);
@@ -141,7 +142,7 @@ export const useForgotPassword = () => {
 
         },
 
-        onError: (error: any) => {
+        onError: (error: AxiosErrorType) => {
 
             toast.error("Oops..!", { description: error?.message, duration: 5000 })
             console.log("Forgot Password Error", error);
@@ -166,7 +167,7 @@ export const useForgotPasswordVerifyOtp = () => {
 
         },
 
-        onError: (error: any) => {
+        onError: (error: AxiosErrorType) => {
 
             toast.error("Oops..!", { description: error?.message, duration: 5000 })
             console.log("Verify Forgot Password Otp Error", error);
@@ -192,7 +193,7 @@ export const useForgotPasswordOtpResend = () => {
 
         },
 
-        onError: (error: any) => {
+        onError: (error: AxiosErrorType) => {
 
             toast.error("Oops..!", { description: error?.message, duration: 5000 })
             console.log("Verify Forgot Password Otp Resend Error", error);
@@ -218,7 +219,7 @@ export const useForgotPasswordChange = () => {
 
         },
 
-        onError: (error: any) => {
+        onError: (error: AxiosErrorType) => {
 
             toast.error("Oops..!", { description: error?.message, duration: 5000 })
             console.log("Verify Forgot Password Change Error", error);
@@ -269,7 +270,7 @@ export const usecheckUsername = (username: string) => {
         },
         enabled: !!username,
         refetchOnWindowFocus: false,
-        retry: false,
+        retry: 1,
 
     })
 
@@ -291,7 +292,7 @@ export const useCheckIndentifier = (indentifier: string) => {
         },
         enabled: !!indentifier,
         refetchOnWindowFocus: false,
-        retry: false,
+        retry: 1,
 
     })
 

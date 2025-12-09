@@ -28,9 +28,10 @@ export default function MainLayout() {
             <div className="flex flex-1">
 
                 {/* Sidebar */}
-                <div className="hidden md:block h-[calc(100vh-58px)] sticky top-[58px]">
+                <aside className="hidden md:block sticky top-[65px] h-[calc(100vh-65px)] overflow-y-auto">
                     <Sidebar isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
-                </div>
+                </aside>
+
 
                 {/* Main Content */}
                 <main className="flex-1 pb-20 md:pb-6 transition-all duration-300 ease-in-out">

@@ -96,8 +96,8 @@ axiosInstance.interceptors.response.use(
 
 
         // Handle other errors
-        const status = error.response?.status;
-        const data = error.response?.data;
+        const status = error?.response?.status;
+        const data = error?.response?.data;
         const message = (data as any)?.message || "Something went wrong, please try again.";
 
         return Promise.reject({ status, message, data });

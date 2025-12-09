@@ -34,13 +34,15 @@ export default function Header({ isCollapsed, setIsCollapsed }: { isCollapsed: b
 
                         <div className="flex justify-start items-center gap-2 md:gap-4">
 
+
+                            {/* Sidebar Button (only visible on desktop) */}
                             <Button
                                 variant="ghost"
                                 size="icon"
                                 onClick={() => setIsCollapsed(!isCollapsed)}
-                                className="dark:hover:bg-muted-foreground/50 rounded-full p-5 hover:cursor-pointer"
+                                className="dark:hover:bg-muted-foreground/50 rounded-full p-5 hover:cursor-pointer hidden md:flex"
                             >
-                                <Menu style={{width:"22px" , height:"28px"}} className="lnline-block mt-1" />
+                                <Menu style={{ width: "22px", height: "28px" }} className="mt-1" />
                             </Button>
 
                             <motion.div

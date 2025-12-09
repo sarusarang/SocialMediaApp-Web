@@ -50,9 +50,9 @@ function App() {
 
             <Route index element={<Feed />} />
 
-            <Route path="profile" element={<Profile />} />
+            <Route path="profile" element={<UsersProfile />} />
 
-            <Route path="userprofile/:username" element={<UsersProfile />} />
+            <Route path="userprofile/:username" element={<Profile />} />
 
             <Route path="edit-profile" element={<EditProfile />} />
 
